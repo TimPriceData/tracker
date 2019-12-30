@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Hello, {{ users.username }}</h1>
+    {% for log in logs %}
+    <div><p>{{ log.owner.username }} says: <b>{{ log.record }}</b></p></div>
+    {% endfor %}
+{% endblock %}}
